@@ -4,6 +4,8 @@
 		<title>Build</title>
 		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw==" crossorigin="anonymous">
 		<link rel='stylesheet' href='css\style.css'/>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
 	</head>
 	<body>
 		<div class="jumbotron"id="section0">
@@ -13,26 +15,26 @@
 				<span class="glyphicon glyphicon-play play"></span>
 				<br>	
 				<div class="row">
-					<div class="col-lg-6">
-						<h3>WE DESIGN,CREATE,INNOVATE THE <span style="color:brown">WORLD</span>...</h3>
+					<div class="col-lg-6 col-xs-12">
+						<h3>WE DESIGN,CREATE, INNOVATE THE <span style="color:brown">WORLD</span>...</h3>
 					</div>
 				</div>
 			</div>
-			<div class="container-video"style="text-align:center;margin:0px">
-				<span class="glyphicon glyphicon-remove remove"></span> 
-				<video id="video1" loop=""autoplay preload="">
-					<source src="model.mp4" type="video/mp4">
-				</video>
-			</div>
-		
+		</div>
+		<div class="jumbotron container-video"style="text-align:center;margin:0px">
+			<span class="glyphicon glyphicon-remove remove0"></span> 
+			<video id="video1" loop="" preload="">
+				<source src="model.mp4" type="video/mp4">
+			</video>
+			<span class="glyphicon glyphicon-play play1"style="position:relative;top:90%"></span>
 		</div>
 		<div class="jumbotron"id="section1">
 			<div class="header">
 				<div class="container">
 					<div class="row">
-						<div class="col-lg-6">
-							<h2 style="font-family:'Courier New', Courier, monospace;font-ssize:25px"><strong>PROJECT</strong></h2>
-							<h4 style="font-family:'Courier New', Courier, monospace;font-ssize:25px"><strong>Model</strong></h4>
+						<div class="col-sm-2">
+							<h2 style="font-family:'Courier New', Courier, monospace"><strong>PROJECT</strong></h2>
+							<h4 style="font-family:'Courier New', Courier, monospace"><strong>Model</strong></h4>
 						</div>
 						<div class="pull-right">
 							<ul>
@@ -51,13 +53,12 @@
 								</li>   
 								<li class="tab signUp">
 									<h3>Sign Up</h3>
-								</li>   						
+								</li>  
 							</ul>
 						</div>
 					</div>
 				</div>
 			</div>
-
 			<div class="container-fluid">
 				<div class="row"id="row1">	
 					<div id="col1"class="col-xs-12 col-sm-4">
@@ -185,13 +186,43 @@
 					</div>
 				</div>
 			</div>
-			<div class="footer"style="position:relative;top:10em">
+			<div class="footer">
 				<span class="glyphicon glyphicon-arrow-down arrowDown"></span>
 			</div>
 		</div>
 		 <div class="jumbotron"id="sectionJoin">
-			<div class="container">
-			 <span class="glyphicon glyphicon-remove remove"style="float:right"></span> 
+			<div class="header">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-2">
+							<h2 style="font-family:'Courier New', Courier, monospace"><strong>PROJECT</strong></h2>
+							<h4 style="font-family:'Courier New', Courier, monospace"><strong>Model</strong></h4>
+						</div>
+						<div class="pull-right">
+							<ul>
+								<li class="dropdown tab">
+									<h3>About <b class="caret"></b></h3>
+									<ul class="dropdown-menu">
+										<li class="information1">General information</li>
+										<li><a href="https://www.youtube.com/watch?v=j40uykL2ZHA"style="background-color:transparent">Video</a></li>
+									</ul>
+								</li>
+								<li class="tab gallery1">
+									<h3>Gallery</h3>
+								</li>
+								<li class="tab logIn1">
+									<h3>Log In</h3>
+								</li>   
+								<li class="tab signUp1">
+									<h3>Sign Up</h3>
+								</li>  
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="container container1">
+			 <span class="glyphicon glyphicon-remove remove1"style="float:right"></span> 
 			 <h2>For more information join us</h2>
 				<form>
 				  <div class="form-group">
@@ -210,13 +241,44 @@
 					<label for="inputPassword">Password</label>
 					<input type="text" class="form-control" id="password"placeholder="Enter your pasword (at least 8 characters long)">
 				  </div>
-				  <button type="submit" class="btn btn-default">Create account</button>
+				  <button type="submit" class="btn btn-default"onclick="this.disabled=true">Create account</button>
 				</form>
 			</div>
 		</div>
 		 <div class="jumbotron"id="sectionSign"style="display:none">
-		  <div class="container">
-			<span class="glyphicon glyphicon-remove remove"style="float:right"></span> 
+			<div class="header">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-2">
+							<h2 style="font-family:'Courier New', Courier, monospace"><strong>PROJECT</strong></h2>
+							<h4 style="font-family:'Courier New', Courier, monospace"><strong>Model</strong></h4>
+						</div>
+						<div class="pull-right">
+							<ul>
+								<li class="dropdown tab">
+									<h3>About <b class="caret"></b></h3>
+									<ul class="dropdown-menu">
+										<li class="information1">General information</li>
+										<li><a href="https://www.youtube.com/watch?v=j40uykL2ZHA"style="background-color:transparent">Video</a></li>
+									</ul>
+								</li>
+								<li class="tab gallery1">
+									<h3>Gallery</h3>
+								</li>
+								<li class="tab logIn1">
+									<h3>Log In</h3>
+								</li>   
+								<li class="tab signUp1">
+									<h3>Sign Up</h3>
+								</li>  
+								
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		  <div class="container container1">
+			<span class="glyphicon glyphicon-remove remove2"style="float:right"></span> 
 			<h2>Welcome back</h2>
 				<form>
 				  <div class="form-group">
@@ -227,10 +289,10 @@
 					<label for="inputPassword">Password</label>
 					<input type="text" class="form-control" id="password"placeholder="Enter your pasword ">
 				  </div>
-				  <button type="submit" class="btn btn-default">Sign in</button>
+				  <button type="submit" class="btn btn-default"onclick="this.disabled=true">Sign in</button>
 				  <br>
-				  <div class="row">
-				  <div class="col-xs-5 col-lg-12"style="background:scroll;text-align:center">
+				  <div class="row"style="">
+				  <div class="col-xs-10 col-lg-12" style="text-align:center">
 					<img src="imagini\welcome.jpg"/>
 				  </div>
 				  </div>
@@ -238,7 +300,7 @@
 			</div>
 		</div>
 		<div class="jumbotron"id="sectionGallery">
-			<span class="glyphicon glyphicon-remove remove"></span> 
+			<span class="glyphicon glyphicon-remove remove3"></span> 
 			<div class="container">
 				<div class="row">
 					<div class="col-md-4 col-s-12 colG">
@@ -528,7 +590,7 @@
 							<img src="imaginiG\I8.jpg">
 						</a>
 					</div>
-					   <div class="col-xs-12 col-md-4">
+					<div class="col-xs-12 col-md-4">
 						<a class="thumbnail" href="#">
 							<img src="imaginiG\I9.jpg">
 						</a>
@@ -536,7 +598,6 @@
 				</div>
 			</div>
 		</div>
-		
 		<div class="jumbotron sectionG"id="sectionDesign">
 			<span class="glyphicon glyphicon-arrow-right arrowR"></span> 
 			<h1>DESIGN</h1>
@@ -595,28 +656,21 @@
 				</div>
 			</div>
 		</div>
-		
 		<div class="jumbotron sectionG" id="sectionDisplay">
 			<div class="container">
 				<span class="glyphicon glyphicon-arrow-right arrowR"></span> 
 				<div class="imagini"></div>
 			</div>
-		</div>
-			
+		</div>	
 		<div class="jumbotron"id="sectionInformation">
 			<div class="jumbotron jumbotronH">
 				<div class="header">
 					<div class="container">
-						<div class="row">
-							<div class="col-md-2">
-								<img src="imaginiG\In2.jpg"style="width:120px"/>
-							</div>
 							<div class="pull-right">
-								<span class="glyphicon glyphicon-home home"></span>
+								<span class="glyphicon glyphicon-home home"style="color:black"></span>
 							</div>
-						</div>
 						<div class="main">
-							<h1 style="font-family:'Courier New', Courier, monospace;font-ssize:25px"><strong>We inspire your world</strong></h1>
+							<h1 style="font-family:'Courier New', Courier, monospace;font-size:25px"><strong>We inspire your world</strong></h1>
 						</div> 
 					</div>
 				</div>
@@ -658,7 +712,32 @@
 							<p>We are committed to providing clients with innovative ideas, quality workmanship and outstanding projects.</p>
 						</div>
 					</div>
-				</div>       
+				</div>  			
+				<div class="sectionI4">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-6 colI">
+							<h1>We offer</h1>
+							<p>The best customer service...</p>
+						</div>
+						<div class="col-md-6 colI">
+							<img src="imaginiG\In5.jpg"style="width:300px;width:300px"/>
+						</div>
+					</div>
+				</div>
+			<div class="sectionI3">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-6 colI">
+							<img style="width:300px;width:300px"src="imaginiG\In6.jpg"/>
+					   </div>
+						<div class="col-md-6 colI">
+							<h1>If you need new ideas </h1>
+							<p>Just ask for help</p>
+						</div>
+					</div>
+				</div> 				
+			</div>	
 			</div>
 			<div class="feature">
 				<div class="container">

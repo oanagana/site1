@@ -9,55 +9,42 @@ body{
 	height:100%;
 	background:url("design.jpg") no-repeat fixed center center/cover;
 	z-index:1;
+
 }
-.remove {
-	color:#DAA520;
+.container-video {
 	position:absolute;
-	right:3em;
-	top:3em;
-	z-index:2000;
-	font-size:1.3em;
-	cursor: pointer;
-	width:40px;
-	height:40px;
-	text-align:center;
-	padding-top:10px;
-	display:none;
-}
-.content {
-	position:relative;
-	top:3em;
-	text-align:center;
+	padding:0px;
+	margin:0px;
+	top:0;
 	width:100%;
-}
-.content h3 ,.content h2{
-	font-family:'Courier New', Courier, monospace;
-	font-size:25px;
-	position:relative;
-	z-index:3000;
-}
-.content h3:hover{
-	transform:scale(1.1);
-	color:#8B0000;
+	height:100%;
+	background:black no-repeat fixed center center/cover;
+	z-index:1000;
+	display:none;
+
 }
 #video1 {
-    background: #646464 none repeat scroll 0 0;
-    display: none;
-    height: auto;
-    left: 50%;
-    min-height:100%;
-    min-width:100%;
-    position: absolute;
+    position: fixed;
     top: 50%;
-    transform: translate(-50%, -50%);
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
     width: auto;
-    z-index: 1000;
-	cursor: pointer;
-	display:none;
-	opacity:1;
-	margin-left:0px
+    height: auto;
+    z-index: -100;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background: url(polina.jpg) no-repeat;
+    background-size: cover; 
+
 }
-.play {
+video::-webkit-media-controls-fullscreen-button {
+    display: none;
+}
+
+.play,.play1{
 	color:#A0522D;
 	width:40px;
 	height:40px;
@@ -68,18 +55,57 @@ body{
 	cursor: pointer;
 	background-color:rgba(160,82,45,0.3);
 }
-.play:hover{
+.play:hover,.play1:hover{
 	color:#D2691E;
 	border-color:#8B0000;
 	background-color:#8B0000;
+}
+.remove0,.remove1,.remove2,.remove3{
+	color:#DAA520;
+	position:absolute;
+	right:1em;
+	top:1em;
+	z-index:5000;
+	font-size:1.1em;
+	cursor: pointer;
+	width:40px;
+	height:40px;
+	text-align:center;
+	padding-top:10px;
+}
+#section1{
+	margin:0px;
+	padding:0px;
+	top:0;
+	width:100%;
+	height:auto;
+	background:transparent;
+	display:none;
+}
+.content {
+	position:relative;
+	top:-0.5em;
+	text-align:center;
+	width:100%;
+}
+.content h3 ,.content h2{
+	font-family:'Courier New', Courier, monospace;
+	font-size:2em;
+	position:relative;
+	z-index:3000;
+}
+.content h3 {
+	padding-top:0.5em;
 }
 .header .container{
 	width:100%;
 	color:#DAA520;
 }
 .header ul {
+  position:relative;
   list-style: none;
   padding: 0;
+  top:40px;
 }
 
 .header li {
@@ -90,11 +116,12 @@ body{
 }
 
 .header .tab{
-  margin-right: 20px;
-  padding:10px 20px;
-  background-color:rgba(160,82,45,0.3);
+  margin-right:10px;
+  padding:10px ;
+  background-color:rgba(160,82,45,0.6);
   border-radius:2px;
 }
+
 .header .tab:hover {
 	background-color:rgba(178,34,34,0.5);	
 }
@@ -110,8 +137,9 @@ body{
 }
 
 .header .dropdown-menu {
+  border-top:transparent 6px solid;
   position: absolute;
-  top: 40px;
+  top: 33px;
   border-radius: 0;
   background-color:rgba(139,69,0,0.3);
 }
@@ -129,15 +157,7 @@ body{
 .header .dropdown-menu li:hover{
 	background-color:rgba(178,34,34,0.5);	
 }
-#section1{
-	margin:0px;
-	top:0;
-	position:absolute;
-	width:100%;
-	height:100%;
-	display:none;
-	background:transparent;
-}
+
 #section1 .container-fluid {
 	position:relative;
 	top:5em;
@@ -161,8 +181,6 @@ body{
 #col1 h2 {
 	right:0px;
 }
-
-
 .imgCol,.slide,.slide1,.slide2{
 	width:100%;
 	height:100%;
@@ -170,9 +188,8 @@ body{
     top:0;
     bottom:0;
     margin:auto;
-	border-radius:3em;
-	border:1px solid rgba(139,69,0,0.3);
 	padding-right:0px;
+	border-radius:3em;
 }
 .slide,.slide1,.slide2,.slide3 {
 	display:none;
@@ -183,11 +200,11 @@ body{
 .imgCol:hover{
 	transform:scale(1.05);
 	border:3px solid #D2691E;
-
 }
 #col2 {
 	padding:0px;
 	height:50%;
+
 }
 #col2 h2 {
 	left:40%;
@@ -207,6 +224,10 @@ body{
 	text-align:center;
 	margin-top:4em;
 }
+#section1 .footer {
+	position:relative;
+	top:10em;
+}
 .circle {
 	width :12px;
 	height:12px;
@@ -220,7 +241,9 @@ body{
 }
 .arrowLeft,.arrowRight{
 	color:#DAA520;
-	cursor: default	
+	cursor: default;
+	width:40px;
+	height:40px;	
 }
 .arrowLeft:hover,.arrowRight:hover{
 	color:rgba(178,34,34,0.5);	
@@ -245,47 +268,49 @@ body{
 	padding:0px;
 	display:none;
 }
-#sectionJoin,#sectionSign {
 
+#sectionJoin,#sectionSign {
 	background:transparent;
 }
-#sectionJoin .container,#sectionSign .container {
-  position:relative;
-  color:#DAA520 ;
-  top:13em;
-  height:500px;
-  width:980px;
-  background-color:rgba(139,69,19,0.5);
-  border-bottom:2px solid #DAA520;
-  border-top:2px solid #DAA520;
-  }
-  #sectionJoin .container:hover,#sectionSign .container:hover{
-  border-bottom:2px solid #7FFFD4;
-  border-top:2px solid #7FFFD4;
-  }
+#sectionJoin .container1,#sectionSign .container1 {
+	position:relative;
+	color:#DAA520 ;
+	top:4em;
+	background-color:rgba(139,69,19,0.5);
+	border-bottom:2px solid #DAA520;
+	border-top:2px solid #DAA520;
+	padding-bottom:1.2em;
+	padding-top:1.2em;
+}
+#sectionJoin .container1:hover,#sectionSign .container1:hover{
+	border-bottom:2px solid #7FFFD4;
+	border-top:2px solid #7FFFD4;
+}
  #sectionSign  img {
-	 position:relative;
-	 top:60px;
-	 transform: perspective(60em) rotateX(80deg);
+	position:relative;
+	width:50%;
+	margin:0px;
+	transform: perspective(60em) rotateX(30deg);
  }
 .form-control {
-  border-radius:0px;
-  width:700px;
-  background-color:rgba(255,140,0,0.3);
-  border-color:transparent;
-  border-bottom:3px solid #8B4513;
+	border-radius:0px;
+	position:relative;
+	width:100%;
+	background-color:rgba(255,140,0,0.3);
+	border-color:transparent;
+	border-bottom:3px solid #8B4513;
 }
 .form-control:hover{
 	border-bottom:3px solid #00FFFF;
 }
 .btn{
-  margin-top:30px;
-  background-color:#8B4513;
-  color:#DAA520;
-  border-radius:1px;
-  border-color:black;
-  float:right;
-  margin-right:20px;
+	margin-top:30px;
+	background-color:#8B4513;
+	color:#DAA520;
+	border-radius:1px;
+	border-color:black;
+	float:right;
+	margin-right:20px;
 }
 .btn:hover{
     color:#8B4513;
@@ -301,33 +326,33 @@ body{
 	top:100px;
 }
 .stage1,.stage2,.stage3 {
-  width:300px;
-  height: 300px;
-  display: inline-block;
-  perspective: 1200px;
-  perspective-origin: 50% 50%;
+	width:300px;
+	height: 300px;
+	display: inline-block;
+	perspective: 1200px;
+	perspective-origin: 50% 50%;
 }
 .ball {
-  display: inline-block;
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  border-radius: 50%;
-  position: relative;
-  background: radial-gradient(circle at 50% 120%, #A0522D, #EEDD82 10%, #8B4513 80%, #8B4513 100%);
-  text-align:center;
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	border-radius: 50%;
+	position: relative;
+	background: radial-gradient(circle at 50% 120%, #A0522D, #EEDD82 10%, #8B4513 80%, #8B4513 100%);
+	text-align:center;
 }
 .ball:before {
-  content:"";
-  position: absolute;
-  top: 1%;
-  left: 5%;
-  width: 90%;
-  height: 90%;
-  border-radius: 50%;
-  background: radial-gradient(circle at 50% 0px, #FFA500, rgba(255, 255, 255, 0) 40%);
-  filter: blur(5px);
-  z-index: 2;
+	content:"";
+	position: absolute;
+	top: 1%;
+	left: 5%;
+	width: 90%;
+	height: 90%;
+	border-radius: 50%;
+	background: radial-gradient(circle at 50% 0px, #FFA500, rgba(255, 255, 255, 0) 40%);
+	filter: blur(5px);
+	z-index: 2;
 }
 .ball1 {
 	position:relative;
@@ -351,8 +376,9 @@ body{
 	text-align:center;
 }
 .thumbnail {
-  background:transparent ;
-  border:none;
+	background:transparent ;
+	border:none;
+	position:relative;
 }
 .thumbnail img {
     display: block;
@@ -364,7 +390,7 @@ body{
     margin-right: auto;
 }
 .thumbnail img:hover {
-	transform:scale(1.15);
+	transform:scale(1);
 	border:2px solid #40E0D0;
 }
 #sectionBuild,#sectionCreate,#sectionDesign{
@@ -411,16 +437,16 @@ body{
 	top:-50px;
 }
 .jumbotronH {
-  background:url("fundal3.jpg");
-  background-size: cover;
-  margin-bottom:0px;
-  padding-bottom:40px;
+	background:url("fundal3.jpg");
+	background-size: cover;
+	margin-bottom:0px;
+	padding-bottom:40px;
+	margin:0px;
 }
 #sectionInformtion .main{
-  position:relative;
-  top:50px;
-  margin-bottom:200px;
-  
+	position:relative;
+	top:50px;
+	margin-bottom:200px;  
 }
 .home{
 	cursor:pointer;
@@ -433,29 +459,28 @@ body{
 	padding-top:10px;
 }
 .sectionI1, .sectionI2 , .sectionI3 {
-  color:white;
-  padding-top: 30px; 
-  padding-bottom:30px;
+	color:white;
+	padding-top: 30px; 
+	padding-bottom:30px;
 }
 .feature {
-  background:url("fundal4.jpg")no-repeat  scroll center center/cover;
-  height:200px;
+	background:url("fundal4.jpg")no-repeat  scroll center center/cover;
+	height:200px;
+	margin:0;
 }
 .feature .container{
-  top:70px;
-  position:relative;
-  text-align:center;
-}
-.feature li {
-  display:inline;
+	top:70px;
+	width:100%;
+	position:relative;
+	color:#757575;
 }
  #sectionInformation{
  background:rgb(0,0,0) no-repeat fixed center center/cover;
- }
+}
 .colI {
 	text-align:center;
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
 	#col1 {
 		transform:  rotateY(0deg);	
 		top:0em;
@@ -469,5 +494,86 @@ body{
 	}
 	#col4{
 		top:6em;
+	}
+	#video1 {
+		height:100%;
+		width:100%;
+	}
+	.imgCol{
+		position:absolute;
+		top:0;
+		bottom:0;
+		border:transparent;
+		margin:auto;
+		width:70%;
+		left:15%;
+	}
+	.imgCol:hover{
+		transform:scale(1.05);
+		border:3px solid #D2691E;
+	}
+	.header ul {
+		top:0px;
+	}
+	.remove {
+		top:0.2em;
+		right:0.3em;
+	}
+}
+@media (min-width:1600px) and (min-height:2000px),(min-width:2000px) and (min-height:1600px){
+	#video1{
+		width:100%;
+	}
+	.remove{
+		font-size:2em;
+	}
+	.content h3 ,.content h2{
+		font-size:4em;
+	}
+	.play {
+		width:3em;
+		height:3em;
+		font-size:2em;
+		top:1em;
+		border-radius:100%;
+		padding-top:0.9em;
+	}
+	#section1 .container-fluid {
+		position:relative;
+		top:20em;
+	}
+	.header {
+		position:relative;
+		top:3em;
+	}
+	#col2 {
+		top:-2.2em;
+	}
+	#col1,#col3 {
+		top:3.5em;
+	}
+	.imgCol{
+		height:90%;
+	}
+	#section1 .footer {
+		top:20em;
+	}
+	.thumbnail {
+		top:15em;
+	}
+	#sectionJoin .container1,#sectionSign .container1 {
+		top:12em;
+	}
+}
+@media (min-width:1600px) and (min-height:2000px){
+#sectionDisplay  .imagini {
+	position: fixed;
+	top: 30%;
+	width:100%;
+	}	
+}
+@media (max-width: 1280px) {
+	#video1{
+		width:100%;
 	}
 }
